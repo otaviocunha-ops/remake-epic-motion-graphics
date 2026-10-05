@@ -11,7 +11,7 @@ This is a reconstruction workflow, **not a one-click video cloning model**. An a
 ## Install and run
 
 ```sh
-git clone https://github.com/psiotavio/remake-epic-motion-graphics.git
+git clone https://github.com/otaviocunha-ops/remake-epic-motion-graphics.git
 cd remake-epic-motion-graphics
 ```
 

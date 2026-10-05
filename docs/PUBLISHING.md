@@ -1,7 +1,15 @@
 # GitHub repository
 
-The initial repository is https://github.com/psiotavio/remake-epic-motion-graphics and is private. Its origin is configured in the Desktop checkout. Updates can be sent with `git push origin main` after a local commit. Authentication uses the user's normal Git credential helper; no credentials are stored in this package.
+Repository: https://github.com/otaviocunha-ops/remake-epic-motion-graphics
 
-Suggested topics: agent-skills, motion-graphics, video, playwright, ffmpeg, svg-animation, ai-agents. GitHub Actions test macOS/Linux/Windows; a workflow file is not evidence of a passing run.
+The Desktop checkout uses the owner-provided SSH remote:
 
-To publish a separate copy under another account, authenticate GitHub CLI (`gh auth login`) and use `gh repo create remake-epic-motion-graphics --private --source . --remote new-origin --push`. Public redistribution of the supplied toolkit requires its upstream permission; see THIRD_PARTY_NOTICES.md. The original additions have an MIT license.
+```text
+git@github.com-asimov:otaviocunha-ops/remake-epic-motion-graphics.git
+```
+
+Updates can be sent with `git push origin main` after a local commit. The github.com-asimov host alias belongs to this checkout's SSH configuration; other computers should configure their own authentication or clone the standard HTTPS URL from README. No credentials or SSH keys are included in this package.
+
+Suggested topics: agent-skills, motion-graphics, video, playwright, ffmpeg, svg-animation, ai-agents. GitHub Actions test macOS/Linux/Windows. The completed validation run is recorded in VALIDATION.md; a workflow file alone is not evidence of a passing run.
+
+For a separate repository, use your normal GitHub account and a new remote. See THIRD_PARTY_NOTICES.md for toolkit provenance and licensing scope. The original additions have an MIT license.

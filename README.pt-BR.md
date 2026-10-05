@@ -11,7 +11,7 @@ O pacote contém o toolkit necessário e um exemplo executável. Não depende de
 ## Começar
 
 ```sh
-git clone https://github.com/psiotavio/remake-epic-motion-graphics.git
+git clone https://github.com/otaviocunha-ops/remake-epic-motion-graphics.git
 cd remake-epic-motion-graphics
 ```
 
