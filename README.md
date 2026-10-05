@@ -80,6 +80,6 @@ Dockerfile                Optional Linux rendering environment
 
 The goal in strict mode is zero-frame cut/typing/cursor offsets and geometry error ≤1% per frame dimension. These are measured acceptance criteria, not an automatic guarantee. Structural verification does not certify visual similarity; inspect side-by-side images and record remaining differences. Native SVG motion is sought by frame, text shares stable baselines, holds stay sharp and UI components have measured final positions. Adaptations are listed explicitly.
 
-The runtime is designed for macOS, Linux and Windows. CI is provided for all three; see [validation](docs/VALIDATION.md) for what was actually run. Cross-OS font rasterization can differ. Bundled toolkit material has no stated upstream license; [notices](THIRD_PARTY_NOTICES.md) separate it from the MIT-licensed original additions. No private Nola assets or reference media are included.
+The runtime is designed for macOS, Linux and Windows. The complete CI smoke passed on all three; see [validation](docs/VALIDATION.md) for what was actually run. Cross-OS font rasterization can differ. Bundled toolkit material has no stated upstream license; [notices](THIRD_PARTY_NOTICES.md) separate it from the MIT-licensed original additions. No private Nola assets or reference media are included.
 
 See [Contributing](CONTRIBUTING.md) and [GitHub publication](docs/PUBLISHING.md).

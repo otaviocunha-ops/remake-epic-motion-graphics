@@ -59,6 +59,6 @@ python scripts/remake.py analyze "films/meu-filme"
 
 Preencha film.json, SPEC.md, os CSVs e os arquivos shots/. A skill orienta alinhamento por linha de base, remoção de tremores, motion blur conforme a referência, animação própria de SVGs, montagem de UI real e CTA centralizado. O renderer incluído produz amostras individuais; blur temporal com múltiplas amostras exige o compositor explicado no guia de qualidade. Transcrição, TTS e trilhas comerciais são opcionais e não estão embutidos.
 
-A meta estrita é erro de corte zero e posições/tamanhos dentro de 1% de cada dimensão. Só declare correspondência depois de medir e inspecionar. Liste adaptações e diferenças restantes. Vídeos com FPS variável ou rotação precisam de normalização explícita. A estrutura é compatível com macOS/Linux/Windows; os testes executados estão em [VALIDATION](docs/VALIDATION.md). Fontes/rasterização podem diferir entre sistemas.
+A meta estrita é erro de corte zero e posições/tamanhos dentro de 1% de cada dimensão. Só declare correspondência depois de medir e inspecionar. Liste adaptações e diferenças restantes. Vídeos com FPS variável ou rotação precisam de normalização explícita. Os testes completos passaram em macOS, Linux e Windows no GitHub Actions; os testes executados estão em [VALIDATION](docs/VALIDATION.md). Fontes/rasterização podem diferir entre sistemas.
 
 [Estrutura completa](README.md#repository) · [Publicar no GitHub](docs/PUBLISHING.md) · [Licenças e origem do toolkit](THIRD_PARTY_NOTICES.md)
