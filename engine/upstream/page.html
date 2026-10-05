@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- Frame by Frame: stage template. Copy it into the film folder as page.html.
+     Every frame is drawn by window.seekFrame(F) from ../engine/core.js; shots live in shots/*.js. -->
+<html><head><meta charset="utf-8"><title>My film</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#fff}
+body{font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#151514}
+#stage{position:absolute;inset:0;overflow:hidden;background:#fff}
+.a{position:absolute}
+.row{display:flex;align-items:center}
+.tn{font-variant-numeric:tabular-nums}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs id="fx"></defs></svg>
+<div id="stage"></div>
+<script>
+  window.FPS = 30;            // frames per second
+  window.LAST_FRAME = 149;    // last frame number (150 frames = 5 s at 30 fps)
+  window.PALETTE_SWAP = false; // true = re-hue warm colours (see core.js)
+  window.BRAND = { name: 'My Brand' };  // override any brand token from core.js
+</script>
+<script src="../engine/core.js"></script>
+<script>document.getElementById('fx').innerHTML = mblurDefs();
+window.MISSING = F => `<div class="a" style="inset:0;display:flex;align-items:center;justify-content:center;font:600 60px Inter;color:#ccc">f${Math.floor(F)} — shot not built</div>`;</script>
+
+<!-- SHOTS: one file per shot group, loaded in order. Example inline shot below; move it to shots/A.js. -->
+<script>
+SHOT({ id: 'hello', f0: 0, f1: 149, render(lf, F) {
+  const y = kf(lf, [[0, 60], [18, 0]], E.outC), o = kf(lf, [[0, 0], [12, 1]]);
+  return BG(F, { fadeTop: 40 }) +
+    `<div class="a" style="inset:0;display:flex;align-items:center;justify-content:center">
+       <div style="font:600 120px/1 Inter;letter-spacing:-4px;transform:translateY(${y}px);opacity:${o}">${emberLine(lf, [['Hello,', 10], ['frame', 16], ['by', 22], ['frame.', 28]], { gap: ' ' })}</div>
+     </div>`;
+} });
+</script>
+<script>
+(async () => {
+  for (const w of [400, 500, 600, 700]) await document.fonts.load(`${w} 40px Inter`);
+  await document.fonts.ready;
+  const imgs = [ ...(window.EXTRA_IMGS || []) ];   // preload every image your shots use
+  await Promise.all(imgs.map(s => new Promise(r => { const i = new Image(); i.onload = i.onerror = r; i.src = s; })));
+  window.ready = true;
+})();
+</script>
+</body></html>

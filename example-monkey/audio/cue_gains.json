@@ -1,0 +1,468 @@
+{
+ "note": "Calibrated SFX gains saved from a run of mix.py with the reference audio present. mix.py uses these when ref/audio.wav is absent.",
+ "K_db": 9.82,
+ "cues": [
+  {
+   "name": "tick1",
+   "start": 0.1353,
+   "gain_db": -0.8,
+   "pan": -0.15
+  },
+  {
+   "name": "tick2",
+   "start": 0.1477,
+   "gain_db": 1.0,
+   "pan": 0.0
+  },
+  {
+   "name": "tick3",
+   "start": 0.2203,
+   "gain_db": 5.2,
+   "pan": 0.15
+  },
+  {
+   "name": "tick4",
+   "start": 0.2477,
+   "gain_db": -5.4,
+   "pan": -0.15
+  },
+  {
+   "name": "tick5",
+   "start": 0.2702,
+   "gain_db": -6.5,
+   "pan": 0.0
+  },
+  {
+   "name": "tick6",
+   "start": 0.319,
+   "gain_db": -1.2,
+   "pan": 0.15
+  },
+  {
+   "name": "tick1",
+   "start": 0.3453,
+   "gain_db": 2.2,
+   "pan": -0.15
+  },
+  {
+   "name": "tick2",
+   "start": 0.3678,
+   "gain_db": 1.7,
+   "pan": 0.0
+  },
+  {
+   "name": "tick3",
+   "start": 0.3927,
+   "gain_db": -0.2,
+   "pan": 0.15
+  },
+  {
+   "name": "tick4",
+   "start": 0.4477,
+   "gain_db": 0.8,
+   "pan": -0.15
+  },
+  {
+   "name": "tick5",
+   "start": 0.4678,
+   "gain_db": -5.0,
+   "pan": 0.0
+  },
+  {
+   "name": "tick6",
+   "start": 0.514,
+   "gain_db": -6.5,
+   "pan": 0.15
+  },
+  {
+   "name": "tick1",
+   "start": 0.5827,
+   "gain_db": 0.8,
+   "pan": -0.15
+  },
+  {
+   "name": "tick2",
+   "start": 0.6753,
+   "gain_db": -6.5,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb3",
+   "start": 1.0253,
+   "gain_db": -7.5,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb4",
+   "start": 1.0752,
+   "gain_db": -7.5,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb5",
+   "start": 1.1552,
+   "gain_db": -2.6,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb6",
+   "start": 1.2053,
+   "gain_db": -1.6,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb1",
+   "start": 1.2502,
+   "gain_db": -4.2,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb2",
+   "start": 1.4428,
+   "gain_db": 2.8,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb3",
+   "start": 1.4553,
+   "gain_db": 0.0,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb4",
+   "start": 1.4802,
+   "gain_db": -0.6,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb5",
+   "start": 1.5002,
+   "gain_db": -2.8,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb6",
+   "start": 1.5253,
+   "gain_db": 1.1,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb1",
+   "start": 1.5478,
+   "gain_db": 2.3,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb2",
+   "start": 1.5778,
+   "gain_db": 2.9,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb3",
+   "start": 1.6077,
+   "gain_db": 2.8,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb4",
+   "start": 1.6352,
+   "gain_db": -2.7,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb5",
+   "start": 1.6477,
+   "gain_db": -1.5,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb6",
+   "start": 1.6953,
+   "gain_db": 1.9,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb1",
+   "start": 1.7202,
+   "gain_db": -0.5,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb2",
+   "start": 1.7353,
+   "gain_db": 4.0,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb3",
+   "start": 1.7778,
+   "gain_db": -7.5,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb4",
+   "start": 1.7927,
+   "gain_db": -7.5,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb5",
+   "start": 1.8127,
+   "gain_db": 1.7,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb6",
+   "start": 1.8552,
+   "gain_db": -3.5,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb1",
+   "start": 1.8677,
+   "gain_db": -2.6,
+   "pan": -0.15
+  },
+  {
+   "name": "tickb2",
+   "start": 1.9077,
+   "gain_db": -2.5,
+   "pan": 0.0
+  },
+  {
+   "name": "tickb3",
+   "start": 1.9302,
+   "gain_db": 4.3,
+   "pan": 0.15
+  },
+  {
+   "name": "tickb4",
+   "start": 1.9628,
+   "gain_db": -7.5,
+   "pan": -0.15
+  },
+  {
+   "name": "soft_tick1",
+   "start": 4.3077,
+   "gain_db": -8.4,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick2",
+   "start": 4.3553,
+   "gain_db": -9.9,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick3",
+   "start": 4.3828,
+   "gain_db": -11.4,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick4",
+   "start": 4.4003,
+   "gain_db": -9.5,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick1",
+   "start": 4.4178,
+   "gain_db": -11.1,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick2",
+   "start": 4.4502,
+   "gain_db": -7.4,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick3",
+   "start": 4.4827,
+   "gain_db": -12.6,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick4",
+   "start": 4.5052,
+   "gain_db": -17.2,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick1",
+   "start": 4.5302,
+   "gain_db": -16.3,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick2",
+   "start": 4.5603,
+   "gain_db": -16.1,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick3",
+   "start": 4.5928,
+   "gain_db": -17.1,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick4",
+   "start": 4.6178,
+   "gain_db": -18.3,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick1",
+   "start": 4.6328,
+   "gain_db": -18.6,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick2",
+   "start": 4.6652,
+   "gain_db": -15.9,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick3",
+   "start": 4.6953,
+   "gain_db": -6.6,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick4",
+   "start": 4.7327,
+   "gain_db": -13.6,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick1",
+   "start": 4.7777,
+   "gain_db": -17.5,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick2",
+   "start": 4.7928,
+   "gain_db": -6.6,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick3",
+   "start": 4.8103,
+   "gain_db": -7.4,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick4",
+   "start": 4.8252,
+   "gain_db": -7.3,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick1",
+   "start": 4.9078,
+   "gain_db": -17.4,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick2",
+   "start": 5.0078,
+   "gain_db": -6.6,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick3",
+   "start": 5.0203,
+   "gain_db": -11.3,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick4",
+   "start": 5.0452,
+   "gain_db": -15.2,
+   "pan": 0.0
+  },
+  {
+   "name": "soft_tick1",
+   "start": 5.0928,
+   "gain_db": -14.1,
+   "pan": 0.0
+  },
+  {
+   "name": "tick1",
+   "start": 4.947,
+   "gain_db": -4.6,
+   "pan": 0.0
+  },
+  {
+   "name": "tick2",
+   "start": 5.104,
+   "gain_db": -2.1,
+   "pan": 0.0
+  },
+  {
+   "name": "open_hit",
+   "start": 0.0625,
+   "gain_db": -12.0,
+   "pan": 0.0
+  },
+  {
+   "name": "whoosh_push",
+   "start": 1.1375,
+   "gain_db": 5.5,
+   "pan": 0.0
+  },
+  {
+   "name": "whoosh_cut",
+   "start": 2.0975,
+   "gain_db": 5.7,
+   "pan": 0.0
+  },
+  {
+   "name": "button_click",
+   "start": 2.776,
+   "gain_db": -0.5,
+   "pan": 0.1
+  },
+  {
+   "name": "whoosh_pull",
+   "start": 3.1825,
+   "gain_db": 4.9,
+   "pan": 0.0
+  },
+  {
+   "name": "morph_shimmer",
+   "start": 3.58,
+   "gain_db": -6.5,
+   "pan": 0.0
+  },
+  {
+   "name": "sub_boom",
+   "start": 4.088,
+   "gain_db": -11.4,
+   "pan": 0.0
+  },
+  {
+   "name": "low_pop",
+   "start": 5.146,
+   "gain_db": -22.2,
+   "pan": 0.0
+  },
+  {
+   "name": "settle_swell",
+   "start": 5.3,
+   "gain_db": -5.6,
+   "pan": 0.0
+  },
+  {
+   "name": "settle_tick",
+   "start": 6.54,
+   "gain_db": -3.2,
+   "pan": 0.0
+  }
+ ]
+}

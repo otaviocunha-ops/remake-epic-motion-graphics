@@ -1,0 +1,6 @@
+interface:
+  display_name: "Remake Epic Motion Graphics"
+  short_description: "Rebuild motion graphics from measured reference frames"
+  default_prompt: "Use $remake-epic-motion-graphics to analyze my reference video and recreate its motion with my brand, validating frames side by side."
+policy:
+  allow_implicit_invocation: true

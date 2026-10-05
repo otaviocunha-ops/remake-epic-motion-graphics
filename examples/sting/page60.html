@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- Frame by Frame: stage template. Copy it into the film folder as page.html.
+     Every frame is drawn by window.seekFrame(F) from ../engine/core.js; shots live in shots/*.js. -->
+<html><head><meta charset="utf-8"><title>Frame by Frame x Whop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden;background:#fff}
+body{font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#151514}
+#stage{position:absolute;inset:0;overflow:hidden;background:#fff}
+.a{position:absolute}
+.row{display:flex;align-items:center}
+.tn{font-variant-numeric:tabular-nums}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs id="fx"></defs></svg>
+<div id="stage"></div>
+<script>
+  window.FPS = 30000/1001;    // reference rate: frame numbers match ref/fr/fNNNN.jpg one to one
+  window.LAST_FRAME = 719;   // 60p master: output frame N = reference frame N/2
+  window.PALETTE_SWAP = false;
+  window.BRAND = { name: 'Frame by Frame', mark: 'assets/ff_mark.png' };
+  window.S = 1.5;             // 720-px spec coordinates x S = 1080-px stage
+</script>
+<script src="../../engine/core.js"></script>
+<script>document.getElementById('fx').innerHTML = mblurDefs();
+window.MISSING = F => `<div class="a" style="inset:0;display:flex;align-items:center;justify-content:center;font:600 60px Inter;color:#ccc">f${Math.floor(F)} — shot not built</div>`;</script>
+
+<!-- SHOTS: one file per builder -->
+<script src="shots/common.js"></script>
+<script src="shots/A.js"></script>
+<script src="shots/B.js"></script>
+<script src="shots/C.js"></script>
+<script src="shots/D.js"></script>
+<script>
+(async () => {
+  for (const w of [400, 500, 600, 700]) await document.fonts.load(`${w} 40px Inter`);
+  await document.fonts.ready;
+  const imgs = [ ...(window.EXTRA_IMGS || []) ];   // preload every image your shots use
+  await Promise.all(imgs.map(s => new Promise(r => { const i = new Image(); i.onload = i.onerror = r; i.src = s; })));
+  window.ready = true;
+})();
+</script>
+<script>window.seekFrame = N => window.seek((N / 2) / FPS);</script>
+</body></html>

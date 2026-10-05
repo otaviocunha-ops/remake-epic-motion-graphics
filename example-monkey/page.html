@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- Monkey example: a 7.5 s "prompt box → landing page" ad, 226 frames at 30 fps.
+     Rendered by ../engine/render.mjs; every frame is a pure function of the frame number. -->
+<html><head><meta charset="utf-8"><title>Monkey example</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@300;400;500;600;700&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#fff}
+body{font-family:'Inter','Poppins','SF Pro Display',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#151514;font-feature-settings:"ss01" 0}
+#stage{position:absolute;inset:0;overflow:hidden;background:#fff}
+.a{position:absolute}
+.row{display:flex;align-items:center}
+.tn{font-variant-numeric:tabular-nums}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs id="fx"></defs></svg>
+<div id="stage"></div>
+<script>
+  window.FPS = 30;
+  window.LAST_FRAME = 225;        // 226 frames = 7.53 s
+  window.PALETTE_SWAP = false;    // this film keeps its own colours
+  // Change the on-screen words without touching the shot code:
+  // window.FILM_TEXT = { model: 'Frame 1.0', pill: 'Made with Frame by Frame', logos: ['BANANA CO.', 'JUNGLE', 'FRAME 1.0'] };
+</script>
+<script src="../engine/core.js"></script>
+<script>document.getElementById('fx').innerHTML = mblurDefs();
+window.MISSING = F => `<div class="a" style="inset:0;display:flex;align-items:center;justify-content:center;font:600 60px Inter;color:#ccc">f${Math.floor(F)} — shot not built</div>`;</script>
+<!-- SHOTS: one file per shot group, loaded in order -->
+<script src="shots/L.js"></script>
+<script>
+(async () => {
+  await document.fonts.load('400 40px Inter'); for (const w of [300,400,500,600,700]) await document.fonts.load(`${w} 40px Poppins`); await document.fonts.load('500 40px Inter'); await document.fonts.load('600 40px Inter'); await document.fonts.load('700 40px Inter'); await document.fonts.ready;
+  const imgs = [ 'assets/goat_bg.jpg', 'assets/monkey.jpg', ...(window.EXTRA_IMGS || []) ];
+  await Promise.all(imgs.map(s => new Promise(r => { const i = new Image(); i.onload = i.onerror = r; i.src = s; })));
+  window.ready = true;
+})();
+</script>
+</body></html>

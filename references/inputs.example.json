@@ -1,0 +1,25 @@
+{
+  "reference": "/path/to/reference.mp4",
+  "output": "/path/to/my-film",
+  "brand": {
+    "name": "My Brand",
+    "logo": "assets/logo.svg",
+    "palette": [
+      "#2463EB",
+      "#081229",
+      "#FFFFFF"
+    ]
+  },
+  "mode": "strict",
+  "language": "pt-BR",
+  "swaps": {
+    "interface": "none",
+    "faces_screens": "none",
+    "end_card": "Saiba mais"
+  },
+  "audio": {
+    "policy": "replacement",
+    "source": "",
+    "license": ""
+  }
+}

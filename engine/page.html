@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Frame-driven film</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html,body{overflow:hidden;background:#fff}
+body{font-family:Arial,sans-serif;-webkit-font-smoothing:antialiased}#stage{position:absolute;inset:0;overflow:hidden}.a{position:absolute}.tn{font-variant-numeric:tabular-nums}
+/* Bundle your measured font locally with @font-face before matching typography. */
+</style></head><body><svg width="0" height="0" style="position:absolute"><defs id="fx"></defs></svg><div id="stage"></div>
+<script src="film-settings.js"></script><script src="assets/core.js"></script>
+<script>document.getElementById('fx').innerHTML=mblurDefs();window.MISSING=F=>{throw Error('No shot for frame '+F)};</script>
+<script src="shots/_data.js"></script><script src="shots/_shared.js"></script><script src="shots/A.js"></script><script src="shots/B.js"></script><script src="shots/C.js"></script><script src="shots/D.js"></script>
+<script>
+window.ready=false;
+const rawSeek=window.seekFrame;
+window.seekFrame=async F=>{
+  rawSeek(F);
+  // Inline SVG: deterministically seek supplied native SMIL/CSS/WAAPI motion.
+  for(const svg of document.querySelectorAll('#stage svg')) if(svg.pauseAnimations){svg.pauseAnimations();svg.setCurrentTime(F/window.FPS)}
+  for(const a of document.getAnimations()){a.pause();a.currentTime=F/window.FPS*1000}
+  await Promise.all([...document.querySelectorAll('#stage img')].map(i=>i.decode()));
+};
+(async()=>{
+  try{
+    document.documentElement.style.width=window.WIDTH+'px';document.documentElement.style.height=window.HEIGHT+'px';
+    document.body.style.width=window.WIDTH+'px';document.body.style.height=window.HEIGHT+'px';
+    await Promise.all((window.FONT_LOADS||[]).map(async spec=>{
+      const loaded=await document.fonts.load(spec);if(!loaded.length) throw Error('Required font unavailable: '+spec);
+    }));
+    await document.fonts.ready;
+    await Promise.all((window.EXTRA_IMGS||[]).map(src=>{const i=new Image();i.src=src;return i.decode()}));
+    window.ready=true;
+  }catch(e){window.loadError=String(e)}
+})();
+</script></body></html>

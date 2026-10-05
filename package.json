@@ -1,0 +1,13 @@
+{
+  "name": "remake-epic-motion-graphics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable frame-driven motion graphics reconstruction skill",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}
